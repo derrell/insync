@@ -3,14 +3,14 @@
   "targets": [
     {
       "type": "source",
-      "outputPath": "compiled/source",
+      "outputPath": "output/source",
       "bundle": {
         "include": "qx.*"
       }
     },
     {
       "type": "build",
-      "outputPath": "compiled/build"
+      "outputPath": "output/build"
     }
   ],
   "defaultTarget": "source",

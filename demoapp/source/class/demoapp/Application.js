@@ -1,57 +1,21 @@
-/* ************************************************************************
-
-   Copyright: 2019 undefined
-
-   License: MIT license
-
-   Authors: undefined
-
-************************************************************************ */
-
-/**
- * This is the main application class of "demoapp"
- *
- * @asset(demoapp/*)
- */
 qx.Class.define("demoapp.Application",
 {
   extend : qx.application.Standalone,
 
-
-
-  /*
-  *****************************************************************************
-     MEMBERS
-  *****************************************************************************
-  */
-
   members :
   {
     /**
-     * This method contains the initial application code and gets called 
-     * during startup of the application
-     * 
      * @lint ignoreDeprecated(alert)
      */
     main : function()
     {
-      // Call super class
       this.base(arguments);
 
       // Enable logging in debug variant
       if (qx.core.Environment.get("qx.debug"))
       {
-        // support native logging capabilities, e.g. Firebug for Firefox
-        qx.log.appender.Native;
-        // support additional cross-browser console. Press F7 to toggle visibility
-        qx.log.appender.Console;
+        let logger = qx.log.appender.Console;
       }
-
-      /*
-      -------------------------------------------------------------------------
-        Below is your actual application code...
-      -------------------------------------------------------------------------
-      */
 
       // Create a button
       var button1 = new qx.ui.form.Button("Click me", "demoapp/test.png");
@@ -67,6 +31,13 @@ qx.Class.define("demoapp.Application",
         /* eslint no-alert: "off" */
         alert("Hello World!");
       });
+
+      let             Lodash = insync.Lodash;
+      let obj = { a : [ 2, 3, { b : "hello" } ], c : "world" };
+
+      Lodash.init();
+      console.log(Lodash.get(obj, "a[1]"));
+      console.log(Lodash.get(obj, "a[2].b"));
     }
   }
 });
