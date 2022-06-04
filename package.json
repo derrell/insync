@@ -6,18 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/derrell/insync.git"
-  },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/derrell/insync/issues"
-  },
-  "homepage": "https://github.com/derrell/insync#readme",
-  "devDependencies": {
-    "@qooxdoo/compiler": "^1.0.0-beta.20191224-0859"
+  "dependencies": {
+    "@qooxdoo/framework": "^7.1.1"
   }
 }

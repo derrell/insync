@@ -1,6 +1,6 @@
 qx.Class.define("demoapp.Application",
 {
-  extend : qx.application.Standalone,
+  extend : qx.application.Native,
 
   members :
   {
@@ -56,7 +56,7 @@ qx.Class.define("demoapp.Application",
 //            console.log(`${name}: ${JSON.stringify(changes, null, "  ")}`);
           },
         this);
-      insync1.setPublisher(insync.MessageBusPublisher.publish)
+      insync1.setPublisher(insync.MessageBusPublisher.publish);
       p1 = insync1.getProxy();
 
       insync2 = new Insync(
@@ -67,7 +67,7 @@ qx.Class.define("demoapp.Application",
 //            console.log(`${name}: ${JSON.stringify(changes, null, "  ")}`);
           },
         this);
-      insync2.setPublisher(insync.MessageBusPublisher.publish)
+      insync2.setPublisher(insync.MessageBusPublisher.publish);
       p2 = insync2.getProxy();
 
       p1.hello = "world";

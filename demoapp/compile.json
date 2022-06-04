@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/qooxdoo/qooxdoo-compiler/master/source/resource/qx/tool/schema/compile-1-0-0.json",
+  "$schema": "https://qooxdoo.org/schema/compile-1-0-0.json",
   "targets": [
     {
       "type": "source",
@@ -15,17 +15,26 @@
   ],
   "defaultTarget": "source",
   "locales": ["en"],
-  "environment": {
-      "qx.icontheme": "Tango"
-  },
+
   "applications": [
     {
       "class": "demoapp.Application",
-      "theme": "demoapp.theme.Theme",
+      "theme": "",
       "name": "demoapp",
-      "bootPath": "source/boot"
+      "type" : "node",
+      "include" : [
+         "qx.core.BaseInit"
+      ],
+      "exclude" : [
+         "qx.bom.Selector",
+         "qx.bom.client.Html",
+         "qx.event.handler.Pointer",
+         "qx.event.handler.Gesture",
+         "qx.event.handler.PointerCore"
+      ]
     }
   ],
+
   "libraries": [
     "../insync",
     "."
